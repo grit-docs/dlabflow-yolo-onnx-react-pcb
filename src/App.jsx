@@ -257,7 +257,7 @@ function App() {
   const [isDetecting, setIsDetecting] = useState(false); // 탐지 페이지
   const [errorMessage, setErrorMessage] = useState('');
   const [detections, setDetections] = useState([]);
-  const [debugMode] = useState(false); // 디버깅 모드 활성화 (문제 진단용)
+  const [debugMode] = useState(true); // 디버깅 모드 활성화 (문제 진단용)
   const [customThreshold, setCustomThreshold] = useState(0.5); // Custom threshold 조절
   const thresholdRef = useRef(0.5); // 🔧 실시간 threshold를 위한 ref
   
@@ -1258,6 +1258,7 @@ function App() {
                             position: 'absolute',
                             width: '100%',
                             height: '100%',
+                            /*objectFit: 'cover',*/
                             objectFit: 'contain',
                             zIndex: 1,
                             left: 0,
